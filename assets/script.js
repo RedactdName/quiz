@@ -26,3 +26,8 @@ When timer ends GAME OVER
 
 Prompt to enter initials to add to high score list 
 */
+
+let timer = document.querySelector ("timer");
+let startBtn = document.querySelector ("start");
+let questionEl = document.querySelector ("question");
+
