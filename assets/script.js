@@ -26,8 +26,52 @@ When timer ends GAME OVER
 
 Prompt to enter initials to add to high score list 
 */
+//Variables
+var timer = document.querySelector (".timer");
+var startBtn = document.querySelector (".start-btn");
+var question1 = document.querySelector (".card1");
+var question2 = document.querySelector (".card2");
+var question3 = document.querySelector (".card3");
+var question4 = document.querySelector (".card4");
+var questions = [question1, question2, question3, question4]
+var questionCounter = 0; 
+var score = 0;
 
-let timer = document.querySelector ("timer");
-let startBtn = document.querySelector ("start");
-let questionEl = document.querySelector ("question");
 
+//Functions
+// function timer 
+// for (let i = 0; i < array.length; i++) {
+//     const element = array[i];
+    
+// }
+
+
+//Special Functions
+startBtn.addEventListener ("click", function(){
+    question1.classList.remove("hidden")
+    startBtn.classList.add("hidden")
+})
+
+const btns = document.querySelectorAll('.ans', 'answer')
+
+btns.forEach(btn => {
+//event listener to make questions appear individually and consecutively
+   btn.addEventListener('click', event => {
+        alert(event.target.textContent);
+    questionCounter++ 
+    if(questionCounter==1) {
+        question1.classList.add("hidden")
+        question2.classList.remove("hidden")
+    }
+    if(questionCounter==2) {
+        question2.classList.add("hidden")
+        question3.classList.remove("hidden")
+    }
+    if(questionCounter==3) {
+        question3.classList.add("hidden")
+        question4.classList.remove("hidden")
+    }
+   });
+
+});
+//Logic
