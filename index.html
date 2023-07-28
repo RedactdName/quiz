@@ -12,13 +12,16 @@
     <nav>
         <a href="#">Instructions</a>
         <a href="#">High Scores</a>
-        <timer class="countdown"></timer>
-
+        <div>
+            <timer class="timer center">
+                00:00
+            </timer>
+        </div>
     </nav>
 </header>
 
 <body>
-    <div class="quiz-container">
+    <div class="quiz-container center">
         <h1>Quiz Time!</h1>
         
         <div class="card1 hidden">
@@ -99,7 +102,7 @@
         
     </div>
     
-    <div class="score hidden">
+    <div class="score hidden center">
         <div>
             <label for="">High Score</label><br>
             <input type="text" id="int" name="High Score" value="initials"><br>
@@ -110,7 +113,7 @@
     </div>
     
     <div class="timer">
-        <button type="button" class="start-btn">Start Quiz</button>
+        <button type="button" class="start-btn center">Start Quiz</button>
         
     </div>
 </div>
