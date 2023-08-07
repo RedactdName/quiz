@@ -5,118 +5,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="assets/script.js" defer></script>
     <title>Multiple Choice Quiz</title>
 </head>
-<header>
-    <nav>
-        <a href="#">Instructions</a>
-        <a href="#">High Scores</a>
-        <div>
-            <timer class="timer center">
-                00:00
-            </timer>
-        </div>
-    </nav>
-</header>
 
 <body>
+    <header>
+        <nav>
+            <a href="#">High Scores</a>
+            <div>Time: <span id="countdown">0</span></div>
+        </nav>
+    </header>
     <div class="quiz-container center">
-        <h1>Quiz Time!</h1>
-        
-        <div class="card1 hidden">
-            <h2 class="question-title">Question 1</h2>
-            <p id="question">1.What is the capital city of Alaska?</p>
-            <div class="answers">
-                <button class="ans">         
-                    Anchorage
-                </button>
-                <button class="ans" id="answer">    
-                    Juno
-                </button>
-                <button class="ans">   
-                    Fairbanks
-                </button>
-                <button class="ans">         
-                    Kenai
-                </button>
+
+        <div id="intro">
+            <h1>Quiz Time!</h1>
+            <p>Instructions</p>
+            <button id="start-btn">Start</button>
+        </div>
+
+        <div id="questions" class="hidden">
+            <div id="question">Question Here</div>
+            <div id="choices">Button Choices Here
             </div>
-            
         </div>
         
-        <div class="card2 hidden">
-            <h2 class="question-title">Question 2</h2>
-            <p id="question">2.How many windows does the Empire State Building have?</p>
-            <div class="answers">
-                <button class="ans"> 
-                    6300
-                </button>
-                <button class="ans">
-                    6400
-                </button>
-                <button class="ans" id="answer">
-                    6500
-                </button>
-                <button class="ans">
-                    6600
-                </button>
-            </div>
-            
+        <div id="results" class="hidden">
+            <h2>Your Results </h2>
+            <p>Your score is: <span id="score">0</span></p>
+            <p>Enter your initials: <input type="text" id="initials" width="3"><button id="submit">Submit</button></p>
         </div>
-        <div class="card3 hidden">
-            <h2 class="question-title">Question 3</h2>
-            <p id="question">3.The first barbie hit shelves in what year?</p>
-            <div class="answers">
-                <button class="ans">  
-                    1958
-                </button>
-                <button class="ans" id="answer">
-                    1959
-                </button>
-                <button class="ans">   
-                    1960
-                </button>
-                <button class="ans">
-                    1961
-                </button>
-            </div>
-            
+        <div id="scoreContainer" class="hidden">
         </div>
-        <div class="card4 hidden">
-            <h2 class="question-title">Question 4</h2>
-            <p id="question">4.What was the name of the bomb dropped on Hiroshima in 1945?</p>
-            <div class="answers">
-                <button class="ans">    
-                Frank
-            </button>
-            <button class="ans">
-                Fat Boy
-            </button>
-            <button class="ans">
-                Little Man
-            </button>
-            <button class="ans" id="answer">
-                Little Boy
-            </button>
-        </div>
-        
     </div>
-    
-    <div class="score hidden center">
-        <div>
-            <label for="">High Score</label><br>
-            <input type="text" id="int" name="High Score" value="initials"><br>
-            <input type="submit" value="Submit">
-        </div>
-        
-        
-    </div>
-    
-    <div class="timer">
-        <button type="button" class="start-btn center">Start Quiz</button>
-        
-    </div>
-</div>
+
+    <script src="assets/script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/script.js" defer></script>
+    <title>Multiple Choice Quiz</title>
+</head>
+<header>
+    <nav>
+        <a href="#">High Scores</a>
+        <div id="countdown"></div>
+    </nav>
+</header>
+
+<body>
+    <div class="quiz-container center">
+        <h1>Quiz Time!</h1>
+        
+        <div id="quiz" class="hidden">
+            <div id="question">ABCDEFG</div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+        </div>
+        
+        <div id="quiz" style="display: none">
+            <div id="question2"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+        </div>
+          <div id="quiz" style="display: none">
+            <div id="question3"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+        </div>
+        <div id="quiz" style="display: none">
+            <div id="question4"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+            </div>
+        </div>
+    
+    <div id="scoreContainer" style="display: none">
+        <div>
+            <label for="">High Score</label><br>
+            <input type="text" id="int" name="High Score" value="Initials"><br>
+            <input type="submit" value="Add">
+        </div>
+        
+        
+    </div>
+    
+    <div class="start">
+        <button type="button" class="start-btn center">Start Quiz</button>    
+    </div>
+</div>
+</body>
+
+</html>
