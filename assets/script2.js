@@ -69,13 +69,15 @@ startBtn.addEventListener("click", function () {
 
 const btns = document.querySelectorAll('.ans', 'answer')
 
+
 // When player clicks start button first question appears
 btns.forEach(btn => {
     //event listener to make questions appear/disapper individually and consecutively
     btn.addEventListener('click', event => {
         alert(event.target.textContent);
         questionCounter++
-        if (questionCounter == 1) {
+        if question ["i", i<=0, i++]
+        (questionCounter == 1) {
             question1.classList.add("hidden")
             question2.classList.remove("hidden")
         }
