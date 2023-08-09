@@ -68,11 +68,12 @@ function clock() {
 function endGame() {
     clearInterval(timer)
     // identify where on html that I need to unhide the results
-    questionsEl.classList.add("hidden")
-    resultsEl.classList.remove("hidden")
-    // show final #score
+    results.classList.remove("hidden")
+    var finalScore = timeLeft
+    // show final #score = remaining time
     
     // hide questions container
+    questionsEl.classList.add("hidden")
 }
 //call out second function
 function getQuestion() {
@@ -98,7 +99,7 @@ function answerChoice(e) {
         return
     }
     if (buttonHtml.value !== questions[qIndex].answer) {
-        timeLeft -= 5
+        timeLeft -= 15
         if (timeLeft < 0) {
             timeLeft = 0
         }

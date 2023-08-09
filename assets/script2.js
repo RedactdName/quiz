@@ -76,7 +76,7 @@ btns.forEach(btn => {
     btn.addEventListener('click', event => {
         alert(event.target.textContent);
         questionCounter++
-        if question ["i", i<=0, i++]
+        
         (questionCounter == 1) {
             question1.classList.add("hidden")
             question2.classList.remove("hidden")
