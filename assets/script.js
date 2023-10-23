@@ -6,24 +6,24 @@ var questions = [
         answer: "Juno"
     },
     {
-        question: "2.What year ws the first Barbie doll ?",
+        question: "2.What year was the first Barbie doll ?",
         choices: ['1957', '1958', '1959', '1960'],
         answer: "1959"
     },
     {
-        question: "3. ",
-        choices: ['', '', '', ''],
-        answer: ""
+        question: "3.What is CSS and acronym for? ",
+        choices: ['Cascade Sensory Stressors', 'Covering Stylized Stuff', 'Come Style Stuff', 'Cascading Style Sheets'],
+        answer: "Cascading Style Sheets"
     },
     {
-        question: "4.?",
-        choices: ['', '', '', ''],
-        answer: ""
+        question: "4.What is the ultimate answer to the great question of life?",
+        choices: ['42', '24', 'Binary', 'Foolishness'],
+        answer: "42"
     },
     {
-        question: "5.What is the capital city of Alaska?",
-        choices: ['Anchorage', 'Juno', 'Kenai', 'Fairbanks'],
-        answer: "Juno"
+        question: "5.Who shot first?",
+        choices: ['Greedo', 'Luke', 'Both', 'Han'],
+        answer: "Han"
     }
 ]
 var qIndex = 0
