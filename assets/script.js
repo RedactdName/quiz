@@ -35,11 +35,8 @@ const intro = document.getElementById("intro")
 const question = document.getElementById("question")
 const questionsEl = document.getElementById("questions")
 const choicesEl = document.getElementById("choices")
-const resultsEl = document.getElementById("score")
-// const ansA = document.getElementById("A")
-// const ansB = document.getElementById("B")
-// const ansC = document.getElementById("C")
-// const ansD = document.getElementById("D")
+const initialsEl = document.getElementById("initials")
+const submitEl = document.getElementById("submit")
 const high = document.getElementById("scoreContainer")
 var startBtn = document.querySelector("#start-btn")
 var timer;
@@ -67,10 +64,13 @@ function clock() {
 
 function endGame() {
     clearInterval(timer)
+    timerEl.textContent = timeLeft
     // identify where on html that I need to unhide the results
     results.classList.remove("hidden")
-    var finalScore = timeLeft
+    var finalScore = document.getElementById("score")
+    finalScore.textContent = timeLeft
     // show final #score = remaining time
+    
     
     // hide questions container
     questionsEl.classList.add("hidden")
@@ -113,6 +113,41 @@ function answerChoice(e) {
             getQuestion()
         }
 }
+function validateEnter(e){
+    if (e.key === "Enter") {
+        saveHighscores()
+    }
+}
+function saveHighscores(){
+    var initials = initialsEl.value.trim()
+    if (initials !== "") {
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || []    
+    }
+    var scoreBoard = {
+        highScore: timeLeft, 
+        initials: initials,
+    }
+    highScores.push(scoreBoard)
+    localStorage.setItem("highScores", JSON.stringify(highScores))
+    displayHighscore()    
+}
+function displayHighscore(){
+    var highScores = JSON.parse(localStorage.getItem("highScores")) || [] 
+    results.classList.add("hidden")
+    high.classList.remove("hidden")
+    highScores.sort(function(a,b){
+        return b.highScore - a.highScore
+    }) 
+    for (let i = 0; i < highScores.length; i++) {
+        var liTag = document.createElement("li")
+        high.textContent = highScores[i].initials + "-" + highScores[i].highScore;
+        high.appendChild(liTag)
+
+    }
+
+}
+submitEl.onclick = saveHighscores;
+initialsEl.onkeyup = validateEnter
     // create 2nd fucntion() -- display a question & process a for loop for choices to display as buttons
     // btns.forEach(btn => {
         //     //event listener to make questions appear/disapper individually and consecutively
